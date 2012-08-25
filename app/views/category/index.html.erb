@@ -1,0 +1,25 @@
+<div id="blog">
+
+<a class="category-link"><% @categories.each do |category| %>
+<%= link_to category do %>
+<div id="category-image">
+
+<% @images.each do |image| %>
+<% if category.id == image.category_id %>
+
+
+    <%= image_tag image.photo.url(:big) %>
+
+    <% else %>
+<%end %>
+
+<%end%>
+    
+   <p class="category-name"><%= category.name %></p>
+</div>
+<% end %>
+<% end %>
+
+
+
+</div>

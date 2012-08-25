@@ -1,0 +1,68 @@
+<div id="blog">
+
+
+<div id="category-image-show">
+
+<div id="image-meta">
+	<span class="image-title"><%= @image.title %></span><span class="image-date"><%= @image.created_at.strftime("%d %b %Y") %></span>
+
+</div>
+<p><%= image_tag @image.photo.url(:category) %></p>
+
+<div id="image-info">
+<p class="image-content"><%= @image.content %></p>
+<div class="exif">
+<div id="map">
+
+<% unless @exif.gps.nil? || @exif.gps == 0  %>
+<h3>Ort der Fotografie<h3><%= image_tag "http://maps.google.com/maps/api/staticmap?size=350x300&sensor=false&zoom=15&markers=#{@exif.gps.latitude}%2C#{@exif.gps.longitude}" %>
+<% end %>
+</div>
+<h3>Exif Daten</h3>
+<table>
+<tr>
+<p class="exifmodel"><td>Kameramodel</td><td><%= @exif.exif.model %></td></p>
+</tr>
+<tr>
+<p class="exiffocallength"><td>ISO Bereich</td><td><%= @exif.iso_speed_ratings %></td></p>
+</tr>
+<tr>
+<p class="exiffocallength"><td>Brennweite</td><td><%= @exif.focal_length.to_i %>mm</td></p>
+</tr>
+<tr>
+<p class="exifexposure"><td>Belichtung</td><td><%= @exif.exposure_time.to_s  %>s</td></p>
+</tr>
+<tr>
+<p class="exiffnumber"><td>Blende</td><td>f/<%= @exif.f_number.to_f %></td></p>
+</tr>
+<tr>
+<p class="exiffnumber"><td>Datum der Aufnahme</td><td><%= @exif.date_time_original.strftime("%d %b %Y") %></td></p>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div>
+
+
+<div id="imagecomment">
+
+<h3>Comments</h3>
+<% @image.imagecomments.each do |imagecomment| %>
+
+    <%= render imagecomment %>
+<% end %>
+<%= render "imagecomments/form" %>
+<br>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,34 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.blogtitle {
+}
+
+#article {
+	border-bottom:1px solid #CCC;
+	margin-bottom:40px;
+}
+
+p.posttitle {
+	font-size:22pt;
+	margin-bottom:20px;
+	text-decoration:underline;
+}
+
+div.postcontent {
+	fonts-size: 12pt;
+	padding:5px;
+	margin-bottom:10px;
+	line-height:1.5em;
+}
+
+div.postcontent p {
+	padding:0;
+	margin:0;
+}
+
+p.readfurther a {
+	padding:5px;
+	color:#CCC;
+}

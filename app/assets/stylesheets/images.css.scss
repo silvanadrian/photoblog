@@ -1,0 +1,44 @@
+// Place all the styles related to the images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#images {
+	border:1px solid red;
+	width:800px;
+}
+
+
+#category-image-overview-show {
+	border:1px solid green;
+}
+
+#image-info {
+	font-size:12pt;
+	width:800px;
+}
+
+div.exif {
+	margin-top:50px;
+	height:400px;
+}
+
+div.exif table {
+	margin-top:-20px;
+	width:400px;
+}
+
+div.exif table tr td {
+	padding:8px;
+	border-bottom:1px solid grey;
+	width:100px;
+}
+
+#map {
+	float:right;
+}
+
+#map img {
+	margin-top:-20px;
+}

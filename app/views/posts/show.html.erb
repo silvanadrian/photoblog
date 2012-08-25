@@ -1,0 +1,17 @@
+<p class="notice"><%= notice %></p>
+ 
+ 
+  <p class="posttitle"><%= @post.title %></p>
+
+ 
+
+<div class="postcontent"> <%=raw @post.content %></div>
+<br>
+ <h3>Comments</h3>
+<% @post.comments.each do |comment| %>
+	<%= render comment %>
+<% end %>
+
+<%= render "comments/form" %>
+ 
+

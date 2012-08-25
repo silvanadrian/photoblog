@@ -1,0 +1,43 @@
+// Place all the styles related to the imagecomments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#comment {
+	width:500px;
+	margin:5px;
+	padding:5px;
+	background-color:#EFEFEF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#comments {
+}
+
+#imagecomment {
+	padding:10px;
+}
+
+#imagecomment input {
+	margin-bottom:10px;
+}
+
+span.image-commenter {
+	font-size:12pt;
+	margin-bottom:10px;
+}
+
+span.wrote {
+	font-size:12pt;
+	margin-bottom:10px;
+}
+
+p.image-comment-body {
+	margin-top:10px;
+}
+
+span.image-comment-date {
+	font-size:10pt;
+}

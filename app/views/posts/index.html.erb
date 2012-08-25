@@ -1,0 +1,14 @@
+<div id="blog">
+<br><br>
+
+<% @posts.each do |post| %>
+<div id="article">
+    <p class="posttitle"><%= post.title %></p>
+    <div class="postcontent"><%=raw truncate(post.content, :length => 300) %></div>
+  <p class="readfurther"><%= link_to 'weiterlesen', post %></p>
+</div>
+<% end %>
+
+
+
+</div>
