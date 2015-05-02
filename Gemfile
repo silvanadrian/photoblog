@@ -6,7 +6,7 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'thin'
 gem 'mysql2'
-gem 'paperclip'
+gem "paperclip", "~> 4.2"
 gem 'exifr'
 gem 'xmp'
 gem 'rmagick'
